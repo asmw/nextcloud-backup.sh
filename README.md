@@ -32,4 +32,6 @@ to override pass something like `RSYNC_ARGS="-avx --delete"` in the environment.
 # Environment variables
  - `RSYNC_ARGS`: arguments passed to rsync (default: `-avx --no-owner --no-group --delete`)
  - `SUFFIX`: the backup folder and SQL dump suffix (default: `_$(date +"%Y%m%d")`)
- - `DRYRUN`: prefixed to all commands which do work, i.e. rsync/php/sudo, set to `echo` for a dryrun
+ - `DRYRUN`: prefixed to all commands which do work, i.e. rsync/php/sudo, set to `echo` for a dryrun (default is empty)
+ - `PREPARE`: Run before mysqldump + rsyn is run (default is empty)
+ - `TEARDOWN`: Run after mysqldump and rsync (default is empty)
